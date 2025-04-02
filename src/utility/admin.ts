@@ -16,9 +16,6 @@ const init = async () => {
                 topic: "ride-accepted"
             },
             {
-                topic: "ride-start"
-            },
-            {
                 topic: "ride-update"
             },
             {

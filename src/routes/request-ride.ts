@@ -12,24 +12,31 @@ export const ride = async (req: Request, res: Response) => {
         return;
     }
 
-    const producer = kafka.producer();
-    await producer.connect();
-    await producer.send({
-        topic: 'ride-requested',
-        messages: [
-            { key: 'ride-requested', value: JSON.stringify({
-                userId: "123",
-                sourceLocation: "A",
-                destinationLocation: "B"
-            }) }
-        ],
-    });
+    const timer = Math.floor(Math.random() * (10 - 3 + 1)) + 3;
 
-    await producer.disconnect();
+    
+    setTimeout( async () => {
+        const producer = kafka.producer();
+        await producer.connect();
 
+        await producer.send({
+            topic: 'ride-requested',
+            messages: [
+                { key: 'ride-requested', value: JSON.stringify({
+                    userId: id,
+                    sourceLocation: source,
+                    destinationLocation: destination
+                }) }
+            ],
+        });
+        await producer.disconnect();
+        
+        
+    }, timer*1000);
+    
     res.json({
         msg: "Success"
     })
     return;
-
+    
 }
