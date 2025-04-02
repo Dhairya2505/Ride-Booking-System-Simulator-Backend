@@ -31,11 +31,11 @@ export const ride = async (req: Request, res: Response) => {
         });
         await producer.disconnect();
         
-        
     }, timer*1000);
     
     res.json({
-        msg: "Success"
+        msg: "Success",
+        timer
     })
     return;
     
