@@ -8,7 +8,7 @@ The Ride Booking System Simulator Backend is a lightweight service designed to h
 ## Screenshots
 
 ###### Architecture
-![Architecture](https://dhairyasingla-ride-booking-system-simulator-images.s3.ap-south-1.amazonaws.com/architecture.png)
+![https://dhairyasingla-ride-booking-system-simulator-images.s3.ap-south-1.amazonaws.com/architecture.png](https://dhairyasingla-ride-booking-system-simulator-images.s3.ap-south-1.amazonaws.com/blueprint.png)
 
 
 ## Features
